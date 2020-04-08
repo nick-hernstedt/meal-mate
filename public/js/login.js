@@ -34,6 +34,6 @@ $(document).ready(function() {
       })
       .catch(function(err) {
         console.log(err);
-      });
+      }); 
   }
 });
