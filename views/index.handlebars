@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div id="results"></div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-desktop is-vcentered">
+      <div class="column">
+        <h1 class="title has-text-white has-text-centered" id="mainTitle">
+          Meal Mate
+        </h1>
+        <p class="subtitle has-text-white has-text-centered">
+          The App To Meet N' Eat!
+        </p>
+        <div class="columns is-centered is-vcentered" id="searchBar">
+          <span class="icon has-text-white" id="locIcon">
+           <a href="#" id="search"> <i class="fas fa-location-arrow fa-2x"></i></a>
+          </span>
+          <div class="control column is-one-third is-two-thirds-mobile">
+            <input class="input" id="locationSearch" type="text" placeholder="Location" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="columns is-centered has-text-centered">
+    <div class="column results is-one-third has-background-white">
+      <div id="name">{{name}}</div>
+      <div id="image is-centered"><img src="{{image}}" alt="" /></div>
+      <div id="address">
+        Address:
+        <span class="italics">{{location}}</span>
+      </div>
+      <div class="columns">
+        <div class="column is-half" id="number">
+          Phone Number: <span class="italics">{{phone}}</span>
+        </div>
+        <div class="column is-half" id="reviews">
+          Reviews: {{rating}}
+        </div>
+      </div>
+      <div class="columns is-centered bottomIcons has-background-black">
+        <div class="column has-text-centered">
+          <span class="icon has-text-success">
+            <a href="#" id="yes"><i class="fas fa-heart fa-4x"></i></a>
+          </span>
+        </div>
+        <div class="column has-text-centered">
+          <span class="icon has-text-danger">
+           <a href="#" id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</script>
