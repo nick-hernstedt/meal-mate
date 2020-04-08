@@ -8,8 +8,6 @@ require("dotenv").config();
 
 const key = process.env.API_KEY;
 
-var match = require("../models/match.js");
-
 let i = 0
 
 
