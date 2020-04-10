@@ -20,13 +20,14 @@ router.post("/api/proxy", function(req, res) {
       }
     )
     .then(answer => {
+      console.log(answer.data);
       return res.json(answer.data);
     });
 });
 
-router.get("/main", function (req, res) {
-  res.render("index", req.user)
-})
+router.get("/main", function(req, res) {
+  res.render("index", req.user);
+});
 
 router.put("/api/match/:id", function(req, res) {
   var condition = "id = " + req.params.id;
