@@ -28,8 +28,22 @@ $("#search").on("click", function(event) {
     type: "POST",
     data: location
   }).then(function(data) {
-    console.log(data);
 
-    // find();
+    
+
+    for(let i = 0; i < 20; i++){
+
+    var choices = data.businesses[i]
+
+    $(`#name${[i]}`).text(choices.name)
+    $(`#image${[i]}`).append(choices.image_url)
+    $(`#address${[i]}`).text(choices.location.display_address)
+    $(`#number${[i]}`).text(choices.display_phone)
+    $(`#reviews${[i]}`).text(choices.rating)
+
+    }
+
+
+    console.log(data);
   });
 });
