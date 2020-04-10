@@ -1,7 +1,6 @@
+const no = document.getElementById(`nono`);
 
-const no = document.getElementById(`nono`)
-
-const yes = document.getElementById(`yes`)
+const yes = document.getElementById(`yes`);
 
 // no.onclick = () => {
 //     event.preventDefault()
@@ -12,29 +11,25 @@ const yes = document.getElementById(`yes`)
 //     event.preventDefault()
 //     console.log(`buttsnstuff`)
 //     //find()
-// })  
+// })
 
-$("#search").on("click", function (event) {
+$("#search").on("click", function(event) {
+  event.preventDefault();
 
-    event.preventDefault();
+  var location = {
+    location: $("#locationSearch")
+      .val()
+      .trim()
+  };
 
-    console.log(`baby butter`)
-     
-    var location = {
-        location: $("#locationSearch").val().trim(),
-      };
- 
-    console.log(location)
+  console.log(location);
 
+  $.ajax("/api/proxy", {
+    type: "POST",
+    data: location
+  }).then(function(data) {
+    console.log(data);
 
-    $.ajax("/api/location", {
-        type: "POST",
-        data: location
-    }).then(
-        function () {
-            console.log("butternutsquash");
-
-            find()
-        } 
-    );
+    // find();
+  });
 });
