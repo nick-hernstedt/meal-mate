@@ -36,17 +36,17 @@ $("#search").on("click", function(event) {
     <div class="card0 columns is-centered has-text-centered">
     <div class="column results is-one-third has-background-white">
       <div id="name0">${loc.name}</div>
-      <div id="image0 is-centered"><img src="{{image}}" alt="" /></div>
+      <div id="image0 is-centered"><img src="${loc.image}" alt="" /></div>
       <div id="address0">
         Address:
-        <span class="italics">{{location}}</span>
+        <span class="italics">${loc.location}</span>
       </div>
       <div class="columns">
         <div class="column is-half" id="number0">
-          Phone Number: <span class="italics">{{phone}}</span>
+          Phone Number: <span class="italics">${phone}</span>
         </div>
         <div class="column is-half" id="reviews0">
-          Reviews: {{rating}}
+          Reviews: ${rating}
         </div>
       </div>
       <div class="columns is-centered bottomIcons has-background-black">
