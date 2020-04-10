@@ -4,7 +4,7 @@ form.login {
 }
 
 html {
-  background-image: url(/assets/images/background.jpg);
+  background-image: url(/images/background.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,6 +14,7 @@ html {
 body {
   font-family: "Josefin Sans", sans-serif !important;
   font-weight: 700 !important;
+  color: white;
 }
 
 img {
