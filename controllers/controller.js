@@ -24,6 +24,10 @@ router.post("/api/proxy", function(req, res) {
     });
 });
 
+router.get("/main", function (req, res) {
+  res.render("index", req.user)
+})
+
 router.put("/api/match/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
