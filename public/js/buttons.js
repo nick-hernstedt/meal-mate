@@ -29,7 +29,7 @@ $("#search").on("click", function(event) {
     data: location
   }).then(function(data) {
 
-    $(`#card0`).css("display: flex !important;")
+    $(`#card0`).toggle("is-hidden")
 
     for(let i = 0; i < 20; i++){
 
@@ -48,4 +48,21 @@ $("#search").on("click", function(event) {
   });
 });
 
+$(`#yes0`).on("click", function(){
 
+    event.preventDefault()
+
+    var match = {
+        name: $(`#name0`.value),
+        address: $(`#address0`)
+    }
+
+    console.log(`yessir`)
+
+    $.ajax("/api/match",{
+    type: "post",
+    data: match
+    }).then(function(data){
+        console.log(data)
+    })
+})
