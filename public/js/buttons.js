@@ -30,7 +30,7 @@ $("#search").on("click", function(event) {
   }).then(function(data) {
     $(`#card0`).toggle("is-hidden");
 
-    const cardss = [];
+    const cards = [];
 
     const card = loc => `
     <div class="card0 columns is-centered has-text-centered">
@@ -74,7 +74,7 @@ $("#search").on("click", function(event) {
       // $(`#number${[i]}`).text(choices.display_phone)
       // $(`#reviews${[i]}`).text(choices.rating)
 
-      cardss.push(card(data.businesses[i]));
+      cards.push(card(data.businesses[i]));
     }
 
     cardsContainer.innHTML = cards.join("");
