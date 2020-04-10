@@ -29,7 +29,7 @@ $("#search").on("click", function(event) {
     data: location
   }).then(function(data) {
 
-    
+    $(`#card0`).css("display: flex !important;")
 
     for(let i = 0; i < 20; i++){
 
@@ -47,3 +47,5 @@ $("#search").on("click", function(event) {
     console.log(data);
   });
 });
+
+
