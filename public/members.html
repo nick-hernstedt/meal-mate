@@ -39,23 +39,60 @@
               The App To Meet N' Eat!
             </p>
             <p class="subtitle has-text-white has-text-centered">
-              Search to find your meal below
+              Please Login Below
             </p>
-            <div class="columns is-centered is-vcentered" id="searchBar">
-              <span class="icon has-text-white" id="locIcon">
-                <button href="" id="search">
-                  <i class="fas fa-location-arrow fa-2x"></i
-                ></button>
-              </span>
-              <div class="control column is-one-third is-two-thirds-mobile">
-                <input
-                  class="input"
-                  id="locationSearch"
-                  type="text"
-                  placeholder="Location"
-                />
+            <form class="login">
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="Email"
+                    id="email-input"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
               </div>
-            </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="password"
+                    placeholder="Password"
+                    id="password-input"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div
+                style="display: none"
+                id="alert"
+                class="alert alert-danger"
+                role="alert"
+              >
+                <span
+                  class="glyphicon glyphicon-exclamation-sign"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Error:</span> <span class="msg"></span>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button is-success">
+                    Login
+                  </button>
+                </p>
+              </div>
+            </form>
+            <p>Or sign up <a href="/">here</a></p>
+          </div>
           </div>
         </div>
         <a class="navbar-brand" href="/logout">
@@ -65,7 +102,7 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/members.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/buttons.js"></script>
   </body>
 </html>
