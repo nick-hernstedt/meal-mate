@@ -57,7 +57,10 @@ $(`.yes`).on("click", function() {
   $.ajax("/api/match", {
     type: "post",
     data: match
-  }).then(
-
+  }).then( (data) => {
+    if (data == $(this).attr("restaurant")){
+      alert(`nick sux`)
+    }
+  }
   );
 }); 
