@@ -1,13 +1,15 @@
 var express = require("express");
 
 var router = express.Router();
-
+var db = require("../models")
 const axios = require("axios");
 require("dotenv").config();
 
+const resturant = require("../models/resturant")
+
 const key = process.env.API_KEY;
 
-router.post("/api/proxy", function(req, res) {
+router.post("/api/proxy", function (req, res) {
   console.log(`yes`);
   axios
     .get(
@@ -25,14 +27,18 @@ router.post("/api/proxy", function(req, res) {
     });
 });
 
-router.get("/main", function(req, res) {
+router.get("/main", function (req, res) {
   res.render("index", req.user);
 });
 
-router.put("/api/match/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+router.post("/api/match", function (req, res) {
+  console.log(req.body.name)
 
-  console.log("condition", condition);
+  db.Resturant.create({
+    name: req.body.name,
+  }).then(
+    console.log(req.body.name)
+  )
 });
 
 module.exports = router;
