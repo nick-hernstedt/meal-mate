@@ -57,9 +57,7 @@ $(`.yes`).on("click", function() {
   $.ajax("/api/match", {
     type: "post",
     data: match
-  }).then(function(data) {
-    "SELECT * FROM Resturant"
-    console.log(data);
-  });
-});
- 
+  }).then(
+
+  );
+}); 

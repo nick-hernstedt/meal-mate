@@ -36,9 +36,9 @@ router.post("/api/match", function (req, res) {
 
   db.Resturant.create({
     name: req.body.name,
-  }).then(
-    console.log(req.body.name)
-  )
+  }).catch( err =>{
+    console.log(`better than nick`)
+  })
 });
 
 module.exports = router;
