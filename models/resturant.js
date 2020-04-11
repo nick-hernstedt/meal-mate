@@ -3,13 +3,15 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: DataTypes.STRING,
       validate: {
         len: [1],
       },
     },
     address: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: null,
       len: [1],
     },
   });
@@ -19,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
     
     Resturant.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false,
+        allowNull: true,
       },
     });
   };

@@ -34,7 +34,8 @@ $("#search").on("click", function(event) {
       var choices = data.businesses[i];
 
       $(`#name${[i]}`).text(choices.name);
-      $(`#image${[i]}`).append(choices.image_url);
+      $(`#yes${[i]}`).attr("restaurant", choices.name);
+      $(`#imgsrc${[i]}`).attr("src", choices.image_url);
       $(`#address${[i]}`).text(choices.location.display_address);
       $(`#number${[i]}`).text(choices.display_phone);
       $(`#reviews${[i]}`).text(choices.rating);
@@ -42,20 +43,24 @@ $("#search").on("click", function(event) {
   });
 });
 
-$(`#yes0`).on("click", function() {
+
+
+$(`.yes`).on("click", function() {
   event.preventDefault();
 
   var match = {
-    name: $(`#name0`.value),
-    address: $(`#address0`)
-  };
+    name: $(this).attr("restaurant"),
+    };
 
-  console.log(`yessir`);
+   console.log($(this).attr("restaurant"));
 
   $.ajax("/api/match", {
     type: "post",
     data: match
-  }).then(function(data) {
-    console.log(data);
-  });
-});
+  }).then( (data) => {
+    if (data == $(this).attr("restaurant")){
+      alert(`nick sux`)
+    }
+  }
+  );
+}); 
