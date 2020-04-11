@@ -24,6 +24,54 @@
   </div>
 </section>
 
+
+
+
+<section>
+  <div class="container">
+    {{#each data.businesses}}
+    <div class="columns is-centered has-text-centered">
+      <div class="column results is-one-third has-background-white">
+        <div id="name0">{{this.name}}</div>
+        <div id="image0 is-centered"><img id="imgsrc0" src="#" alt="" /></div>
+        <div id="address0">
+          Address:
+          <span class="italics">{{this.location.display_address}}</span>
+        </div>
+        <div class="columns">
+          <div class="column is-half" id="number0">
+            Phone Number: <span class="italics">{{this.display_phone}}</span>
+          </div>
+          <div class="column is-half" id="reviews0">
+            Reviews: {{this.rating}}
+          </div>
+        </div>
+        <div class="columns is-centered bottomIcons has-background-black">
+          <div class="column has-text-centered">
+            <span class="icon has-text-success">
+              <button class="yes" restaurant="" id="yes0"><i class="fas fa-heart fa-4x"></i></button>
+            </span>
+          </div>
+          <div class="column has-text-centered">
+            <span class="icon has-text-danger">
+              <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  </div>
+</section>
+
+
+
+
+
+
+
+{{!-- 
 <section>
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -45,7 +93,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes0"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes0"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -78,7 +126,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes1"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes1"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -111,7 +159,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes2"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes2"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -144,7 +192,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes3"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes3"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -177,7 +225,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes4"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes4"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -210,7 +258,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes5"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes5"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -243,7 +291,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes6"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes6"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -276,7 +324,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes7"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes7"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -309,7 +357,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes8"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes8"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -342,7 +390,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes9"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes9"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -355,7 +403,7 @@
     </div>
   </div>
   </div>
-  
+
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
@@ -376,7 +424,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes10"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes10"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -409,7 +457,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes11"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes11"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -442,7 +490,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes12"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes12"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -475,7 +523,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes13"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes13"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -508,7 +556,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes14"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes14"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -541,7 +589,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes15"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes15"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -574,7 +622,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes16"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes16"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -607,7 +655,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes17"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes17"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -640,7 +688,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes18"><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes18"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -673,7 +721,7 @@
         <div class="columns is-centered bottomIcons has-background-black">
           <div class="column has-text-centered">
             <span class="icon has-text-success">
-              <button class= "yes" restaurant="" id="yes19" ><i class="fas fa-heart fa-4x"></i></button>
+              <button class="yes" restaurant="" id="yes19"><i class="fas fa-heart fa-4x"></i></button>
             </span>
           </div>
           <div class="column has-text-centered">
@@ -686,4 +734,4 @@
     </div>
   </div>
   </div>
-</section>
+</section> --}}
