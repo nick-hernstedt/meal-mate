@@ -43,16 +43,14 @@ $("#search").on("click", function(event) {
   });
 });
 
-
-
 $(`.yes`).on("click", function() {
   event.preventDefault();
 
   var match = {
-    name: $(this).attr("restaurant"),
-    };
+    name: $(this).attr("restaurant")
+  };
 
-   console.log($(this).attr("restaurant"));
+  console.log($(this).attr("restaurant"));
 
   $.ajax("/api/match", {
     type: "post",
@@ -64,3 +62,4 @@ $(`.yes`).on("click", function() {
   }
   );
 }); 
+
