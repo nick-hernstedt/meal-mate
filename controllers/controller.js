@@ -61,4 +61,19 @@ router.post("/api/proxy", (req, res) => {
     });
 });
 
+
+router.get("/main", function (req, res) {
+  res.render("index", req.user);
+});
+
+router.post("/api/match", function (req, res) {
+  console.log(req.body.name)
+
+  db.Resturant.create({
+    name: req.body.name,
+  }).catch( err =>{
+    res.send(req.body.name)
+  })
+});
+
 module.exports = router;
