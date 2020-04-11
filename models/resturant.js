@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     address: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: null,
       len: [1],
     },
   });
@@ -19,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     
     Resturant.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false,
+        allowNull: true,
       },
     });
   };
