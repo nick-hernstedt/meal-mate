@@ -30,16 +30,16 @@ $("#search").on("click", function(event) {
   }).then(function(data) {
     console.log(data);
 
-    // for (let i = 0; i < 20; i++) {
-    //   var choices = data.businesses[i];
+    for (let i = 0; i < 20; i++) {
+      var choices = data.businesses[i];
 
-    //   $(`#name${[i]}`).text(choices.name);
-    //   $(`#yes${[i]}`).attr("restaurant", choices.name);
-    //   $(`#imgsrc${[i]}`).attr("src", choices.image_url);
-    //   $(`#address${[i]}`).text(choices.location.display_address);
-    //   $(`#number${[i]}`).text(choices.display_phone);
-    //   $(`#reviews${[i]}`).text(choices.rating);
-    // }
+      $(`#name${[i]}`).text(choices.name);
+      $(`#yes${[i]}`).attr("restaurant", choices.name);
+      $(`#imgsrc${[i]}`).attr("src", choices.image_url);
+      $(`#address${[i]}`).text(choices.location.display_address);
+      $(`#number${[i]}`).text(choices.display_phone);
+      $(`#reviews${[i]}`).text(choices.rating);
+    }
   });
 });
 
