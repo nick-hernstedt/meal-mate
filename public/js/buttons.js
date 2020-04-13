@@ -12,8 +12,10 @@ const yes = document.getElementById(`yes`);
 //     console.log(`buttsnstuff`)
 //     //find()
 // })
+let j = 0
 
-$("#search").on("click", function(event) {
+
+$("#search").on("click", function (event) {
   event.preventDefault();
 
   var location = {
@@ -27,7 +29,7 @@ $("#search").on("click", function(event) {
   $.ajax("/api/proxy", {
     type: "POST",
     data: location
-  }).then(function(data) {
+  }).then(function (data) {
     console.log(data);
 
     for (let i = 0; i < 20; i++) {
@@ -40,10 +42,13 @@ $("#search").on("click", function(event) {
       $(`#number${[i]}`).text(choices.display_phone);
       $(`#reviews${[i]}`).text(choices.rating);
     }
+
+    $(`#card${j}`).toggleClass("is-hidden")
+    j += 1
   });
 });
 
-$(`.yes`).on("click", function() {
+$(`.yes`).on("click", function () {
   event.preventDefault();
 
   var match = {
@@ -55,11 +60,21 @@ $(`.yes`).on("click", function() {
   $.ajax("/api/match", {
     type: "post",
     data: match
-  }).then( (data) => {
-    if (data == $(this).attr("restaurant")){
-      alert(`nick sux`)
+  }).then((data) => {
+    if (data != $(this).attr("restaurant")) {
+      console.log(`clciked`)
+      $(`#card${j-=1}`).toggleClass("is-hidden")
+      $(`#card${j += 1}`).toggleClass("is-hidden")
+
+      j += 1
+
     }
+    else if (data == $(this).attr("restaurant")) {
+      alert(`eat at ` + $(this).attr("restaurant"))
+    }
+
+
   }
-  );
+  ); 
 }); 
 

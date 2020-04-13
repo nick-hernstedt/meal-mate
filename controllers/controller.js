@@ -31,47 +31,20 @@ router.get("/main", function(req, res) {
   res.render("index", req.user);
 });
 
-// router.post("/api/match", function(req, res) {
-//   console.log(req.body.name);
-
-//   db.Resturant.create({
-//     name: req.body.name
-//   }).then(console.log(req.body.name));
-// });
-
-// router.post("/api/proxy", (req, res) => {
-//   axios
-//     .get(
-//       `https://api.yelp.com/v3/businesses/search?term=food&location=${req.body.location}`,
-//       {
-//         headers: {
-//           Authorization: `Bearer ${key}`
-//         },
-//         responseType: `json`
-//       }
-//     )
-//     .then(results => {
-//       console.log(results.data);
-//       res.render("index", {
-//         data: results.data
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//     });
-// });
-
-
-router.get("/main", function (req, res) {
-  res.render("index", req.user);
-});
 
 router.post("/api/match", function (req, res) {
   console.log(req.body.name)
 
   db.Resturant.create({
     name: req.body.name,
+  }).then(data => {
+    res.send(data)
   }).catch( err =>{
+    db.Resturant.destroy({
+      where: {
+        name: req.body.name
+      }
+    })
     res.send(req.body.name)
   })
 });
