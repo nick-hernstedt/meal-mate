@@ -35,6 +35,8 @@ $("#search").on("click", function (event) {
         $(`#card${j}`).toggleClass("is-hidden")
         j += 1
     });
+
+    if 
 });
 
 $(`.yes`).on("click", function () {
