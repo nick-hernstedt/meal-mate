@@ -10,22 +10,22 @@ $("#search").on("click", function(event) {
   var location = {
     location: $("#locationSearch")
       .val()
-      .trim()
+      .trim(),
   };
 
   console.log(location);
 
   $.ajax("/api/proxy", {
     type: "POST",
-    data: location
+    data: location,
   }).then(function(data) {
     console.log(data);
 
     for (let i = 0; i < 20; i++) {
-      debugger;
       var choices = data.businesses[i];
 
       $(`#name${[i]}`).text(choices.name);
+      $(`#url${[i]}`).attr("href", choices.url);
       $(`#yes${[i]}`).attr("restaurant", choices.name);
       $(`#imgsrc${[i]}`).attr("src", choices.image_url);
       $(`#address${[i]}`).text(choices.location.display_address);
@@ -42,15 +42,15 @@ $(`.yes`).on("click", function() {
   event.preventDefault();
 
   var match = {
-    name: $(this).attr("restaurant")
+    name: $(this).attr("restaurant"),
   };
 
   console.log($(this).attr("restaurant"));
 
   $.ajax("/api/match", {
     type: "post",
-    data: match
-  }).then(data => {
+    data: match,
+  }).then((data) => {
     if (data != $(this).attr("restaurant")) {
       console.log(`yes clicked`);
       $(`#card${(j -= 1)}`).toggleClass("is-hidden");
