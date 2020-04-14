@@ -24,8 +24,32 @@
   </div>
 </section>
 
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">You Found A Meal Mate!</p>
+      <button class="delete close" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <ol>
+        <li>1: Please remember to shower before going to your meal, people want to smell their food, not you.</li>
+        <br>
+        <li>2: Please keep your elbows off the table, its a resturant not a barn</li>
+        <br>
+        <li>3: Mate also means friend, don't make things weird</li>
+      </ol>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-primary close">Return To Page</button>
+
+    </footer>
+  </div>
+</div>
+
+
 <section>
-  <div class="container is-hidden" id="card0">
+  <<div class="container is-hidden" id="card0">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
         <div id="name0">{{name}}</div>
@@ -50,640 +74,658 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+              <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card1">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name1">{{name}}</div>
-        <div id="image1 is-centered"><img id="imgsrc1" src="{{image}}" alt="" /></div>
-        <div id="address1">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number1">
-            Phone Number: <span class="italics">{{phone}}</span>
+    </div>
+    </div>
+    <<div class="container is-hidden" id="card1">
+      <div class="columns is-centered has-text-centered">
+        <div class="column results is-one-third has-background-white">
+          <div id="name1">{{name}}</div>
+          <div id="image1 is-centered"><img id="imgsrc1" src="{{image}}" alt="" /></div>
+          <div id="address1">
+            Address:
+            <span class="italics">{{location}}</span>
           </div>
-          <div class="column is-half" id="reviews1">
-            Reviews: {{rating}}
+          <div class="columns">
+            <div class="column is-half" id="number1">
+              Phone Number: <span class="italics">{{phone}}</span>
+            </div>
+            <div class="column is-half" id="reviews1">
+              Reviews: {{rating}}
+            </div>
           </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes1"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
+          <div class="columns is-centered bottomIcons has-background-black">
+            <div class="column has-text-centered">
+              <span class="icon has-text-success">
+                <button class="yes" restaurant="" id="yes1"><i class="fas fa-heart fa-4x"></i></button>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <span class="icon has-text-danger">
+                <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card2">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name2">{{name}}</div>
-        <div id="image is-centered"><img id="imgsrc2" src="{{image}}" alt="" /></div>
-        <div id="address2">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number2">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews2">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes2"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card3">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name3">{{name}}</div>
-        <div id="image3 is-centered"><img id="imgsrc3" src="{{image}}" alt="" /></div>
-        <div id="address3">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number3">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews3">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes3"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-  </div>
-  <<div class="container is-hidden" id="card4">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name4">{{name}}</div>
-        <div id="image4 is-centered"><img id="imgsrc4" src="{{image}}" alt="" /></div>
-        <div id="address4">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number4">
-            Phone Number: <span class="italics4">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes4"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card5">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name5">{{name}}</div>
-        <div id="image5 is-centered"><img id="imgsrc5" src="{{image}}" alt="" /></div>
-        <div id="address5">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number5">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews5">
-            Reviews: {{rating}}
+      <<div class="container is-hidden" id="card2">
+        <div class="columns is-centered has-text-centered">
+          <div class="column results is-one-third has-background-white">
+            <div id="name2">{{name}}</div>
+            <div id="image is-centered"><img id="imgsrc2" src="{{image}}" alt="" /></div>
+            <div id="address2">
+              Address:
+              <span class="italics">{{location}}</span>
+            </div>
+            <div class="columns">
+              <div class="column is-half" id="number2">
+                Phone Number: <span class="italics">{{phone}}</span>
+              </div>
+              <div class="column is-half" id="reviews2">
+                Reviews: {{rating}}
+              </div>
+            </div>
+            <div class="columns is-centered bottomIcons has-background-black">
+              <div class="column has-text-centered">
+                <span class="icon has-text-success">
+                  <button class="yes" restaurant="" id="yes2"><i class="fas fa-heart fa-4x"></i></button>
+                </span>
+              </div>
+              <div class="column has-text-centered">
+                <span class="icon has-text-danger">
+                  <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes5"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card6">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name6">{{name}}</div>
-        <div id="image6 is-centered"><img id="imgsrc6" src="{{image}}" alt="" /></div>
-        <div id="address6">
-          Address:
-          <span class="italics">{{location}}</span>
         </div>
-        <div class="columns">
-          <div class="column is-half" id="number6">
-            Phone Number: <span class="italics">{{phone}}</span>
+        <<div class="container is-hidden" id="card3">
+          <div class="columns is-centered has-text-centered">
+            <div class="column results is-one-third has-background-white">
+              <div id="name3">{{name}}</div>
+              <div id="image3 is-centered"><img id="imgsrc3" src="{{image}}" alt="" /></div>
+              <div id="address3">
+                Address:
+                <span class="italics">{{location}}</span>
+              </div>
+              <div class="columns">
+                <div class="column is-half" id="number3">
+                  Phone Number: <span class="italics">{{phone}}</span>
+                </div>
+                <div class="column is-half" id="reviews3">
+                  Reviews: {{rating}}
+                </div>
+              </div>
+              <div class="columns is-centered bottomIcons has-background-black">
+                <div class="column has-text-centered">
+                  <span class="icon has-text-success">
+                    <button class="yes" restaurant="" id="yes3"><i class="fas fa-heart fa-4x"></i></button>
+                  </span>
+                </div>
+                <div class="column has-text-centered">
+                  <span class="icon has-text-danger">
+                    <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="column is-half" id="reviews6">
-            Reviews: {{rating}}
           </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes6"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
           </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card7">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name7">{{name}}</div>
-        <div id="image7 is-centered"><img id="imgsrc7" src="{{image}}" alt="" /></div>
-        <div id="address7">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number7">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews7">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes7"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card8">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name8">{{name}}</div>
-        <div id="image8 is-centered"><img id="imgsrc8" src="{{image}}" alt="" /></div>
-        <div id="address">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number8">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews8">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes8"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card9">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name9">{{name}}</div>
-        <div id="image9 is-centered"><img id="imgsrc9" src="{{image}}" alt="" /></div>
-        <div id="address9">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number9">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews9">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes9"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+          <<div class="container is-hidden" id="card4">
+            <div class="columns is-centered has-text-centered">
+              <div class="column results is-one-third has-background-white">
+                <div id="name4">{{name}}</div>
+                <div id="image4 is-centered"><img id="imgsrc4" src="{{image}}" alt="" /></div>
+                <div id="address4">
+                  Address:
+                  <span class="italics">{{location}}</span>
+                </div>
+                <div class="columns">
+                  <div class="column is-half" id="number4">
+                    Phone Number: <span class="italics4">{{phone}}</span>
+                  </div>
+                  <div class="column is-half" id="reviews">
+                    Reviews: {{rating}}
+                  </div>
+                </div>
+                <div class="columns is-centered bottomIcons has-background-black">
+                  <div class="column has-text-centered">
+                    <span class="icon has-text-success">
+                      <button class="yes" restaurant="" id="yes4"><i class="fas fa-heart fa-4x"></i></button>
+                    </span>
+                  </div>
+                  <div class="column has-text-centered">
+                    <span class="icon has-text-danger">
+                      <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            <<div class="container is-hidden" id="card5">
+              <div class="columns is-centered has-text-centered">
+                <div class="column results is-one-third has-background-white">
+                  <div id="name5">{{name}}</div>
+                  <div id="image5 is-centered"><img id="imgsrc5" src="{{image}}" alt="" /></div>
+                  <div id="address5">
+                    Address:
+                    <span class="italics">{{location}}</span>
+                  </div>
+                  <div class="columns">
+                    <div class="column is-half" id="number5">
+                      Phone Number: <span class="italics">{{phone}}</span>
+                    </div>
+                    <div class="column is-half" id="reviews5">
+                      Reviews: {{rating}}
+                    </div>
+                  </div>
+                  <div class="columns is-centered bottomIcons has-background-black">
+                    <div class="column has-text-centered">
+                      <span class="icon has-text-success">
+                        <button class="yes" restaurant="" id="yes5"><i class="fas fa-heart fa-4x"></i></button>
+                      </span>
+                    </div>
+                    <div class="column has-text-centered">
+                      <span class="icon has-text-danger">
+                        <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              <<div class="container is-hidden" id="card6">
+                <div class="columns is-centered has-text-centered">
+                  <div class="column results is-one-third has-background-white">
+                    <div id="name6">{{name}}</div>
+                    <div id="image6 is-centered"><img id="imgsrc6" src="{{image}}" alt="" /></div>
+                    <div id="address6">
+                      Address:
+                      <span class="italics">{{location}}</span>
+                    </div>
+                    <div class="columns">
+                      <div class="column is-half" id="number6">
+                        Phone Number: <span class="italics">{{phone}}</span>
+                      </div>
+                      <div class="column is-half" id="reviews6">
+                        Reviews: {{rating}}
+                      </div>
+                    </div>
+                    <div class="columns is-centered bottomIcons has-background-black">
+                      <div class="column has-text-centered">
+                        <span class="icon has-text-success">
+                          <button class="yes" restaurant="" id="yes6"><i class="fas fa-heart fa-4x"></i></button>
+                        </span>
+                      </div>
+                      <div class="column has-text-centered">
+                        <span class="icon has-text-danger">
+                          <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                </div>
+                <<div class="container is-hidden" id="card7">
+                  <div class="columns is-centered has-text-centered">
+                    <div class="column results is-one-third has-background-white">
+                      <div id="name7">{{name}}</div>
+                      <div id="image7 is-centered"><img id="imgsrc7" src="{{image}}" alt="" /></div>
+                      <div id="address7">
+                        Address:
+                        <span class="italics">{{location}}</span>
+                      </div>
+                      <div class="columns">
+                        <div class="column is-half" id="number7">
+                          Phone Number: <span class="italics">{{phone}}</span>
+                        </div>
+                        <div class="column is-half" id="reviews7">
+                          Reviews: {{rating}}
+                        </div>
+                      </div>
+                      <div class="columns is-centered bottomIcons has-background-black">
+                        <div class="column has-text-centered">
+                          <span class="icon has-text-success">
+                            <button class="yes" restaurant="" id="yes7"><i class="fas fa-heart fa-4x"></i></button>
+                          </span>
+                        </div>
+                        <div class="column has-text-centered">
+                          <span class="icon has-text-danger">
+                            <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  <<div class="container is-hidden" id="card8">
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column results is-one-third has-background-white">
+                        <div id="name8">{{name}}</div>
+                        <div id="image8 is-centered"><img id="imgsrc8" src="{{image}}" alt="" /></div>
+                        <div id="address">
+                          Address:
+                          <span class="italics">{{location}}</span>
+                        </div>
+                        <div class="columns">
+                          <div class="column is-half" id="number8">
+                            Phone Number: <span class="italics">{{phone}}</span>
+                          </div>
+                          <div class="column is-half" id="reviews8">
+                            Reviews: {{rating}}
+                          </div>
+                        </div>
+                        <div class="columns is-centered bottomIcons has-background-black">
+                          <div class="column has-text-centered">
+                            <span class="icon has-text-success">
+                              <button class="yes" restaurant="" id="yes8"><i class="fas fa-heart fa-4x"></i></button>
+                            </span>
+                          </div>
+                          <div class="column has-text-centered">
+                            <span class="icon has-text-danger">
+                              <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    <<div class="container is-hidden" id="card9">
+                      <div class="columns is-centered has-text-centered">
+                        <div class="column results is-one-third has-background-white">
+                          <div id="name9">{{name}}</div>
+                          <div id="image9 is-centered"><img id="imgsrc9" src="{{image}}" alt="" /></div>
+                          <div id="address9">
+                            Address:
+                            <span class="italics">{{location}}</span>
+                          </div>
+                          <div class="columns">
+                            <div class="column is-half" id="number9">
+                              Phone Number: <span class="italics">{{phone}}</span>
+                            </div>
+                            <div class="column is-half" id="reviews9">
+                              Reviews: {{rating}}
+                            </div>
+                          </div>
+                          <div class="columns is-centered bottomIcons has-background-black">
+                            <div class="column has-text-centered">
+                              <span class="icon has-text-success">
+                                <button class="yes" restaurant="" id="yes9"><i class="fas fa-heart fa-4x"></i></button>
+                              </span>
+                            </div>
+                            <div class="column has-text-centered">
+                              <span class="icon has-text-danger">
+                                <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
 
-  <div class="container is-hidden" id="card10">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name10">{{name}}</div>
-        <div id="image10 is-centered"><img id="imgsrc10" src="{{image}}" alt="" /></div>
-        <div id="address10">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number10">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews10">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes10"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card11">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name11">{{name}}</div>
-        <div id="image11 is-centered"><img id="imgsrc11" src="{{image}}" alt="" /></div>
-        <div id="address">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number11">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews11">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes11"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card12">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name12">{{name}}</div>
-        <div id="image12 is-centered"><img id="imgsrc12" src="{{image}}" alt="" /></div>
-        <div id="address12">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number12">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews12">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes12"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card13">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name13">{{name}}</div>
-        <div id="image13 is-centered"><img id="imgsrc13" src="{{image}}" alt="" /></div>
-        <div id="address13">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number13">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews13">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes13"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card14">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name14">{{name}}</div>
-        <div id="image14 is-centered"><img id="imgsrc14" src="{{image}}" alt="" /></div>
-        <div id="address14">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number14">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews14">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes14"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card15">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name15">{{name}}</div>
-        <div id="image15 is-centered"><img id="imgsrc15" src="{{image}}" alt="" /></div>
-        <div id="address15">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number15">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews15">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes15"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card16">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name16">{{name}}</div>
-        <div id="image16 is-centered"><img id="imgsrc16" src="{{image}}" alt="" /></div>
-        <div id="address16">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number16">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews16">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes16"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card17">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name17">{{name}}</div>
-        <div id="image17 is-centered"><img id="imgsrc17" src="{{image}}" alt="" /></div>
-        <div id="address17">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number17">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews17">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes17"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card18">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name18">{{name}}</div>
-        <div id="image18 is-centered"><img id="imgsrc18" src="{{image}}" alt="" /></div>
-        <div id="address18">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number18">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews18">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes18"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="container is-hidden" id="card19">
-    <div class="columns is-centered has-text-centered">
-      <div class="column results is-one-third has-background-white">
-        <div id="name19">{{name}}</div>
-        <div id="image19 is-centered"><img id="imgsrc19" src="" alt="" /></div>
-        <div id="address19">
-          Address:
-          <span class="italics">{{location}}</span>
-        </div>
-        <div class="columns">
-          <div class="column is-half" id="number19">
-            Phone Number: <span class="italics">{{phone}}</span>
-          </div>
-          <div class="column is-half" id="reviews19">
-            Reviews: {{rating}}
-          </div>
-        </div>
-        <div class="columns is-centered bottomIcons has-background-black">
-          <div class="column has-text-centered">
-            <span class="icon has-text-success">
-              <button class="yes" restaurant="" id="yes19"><i class="fas fa-heart fa-4x"></i></button>
-            </span>
-          </div>
-          <div class="column has-text-centered">
-            <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+                      <<div class="container is-hidden" id="card10">
+                        <div class="columns is-centered has-text-centered">
+                          <div class="column results is-one-third has-background-white">
+                            <div id="name10">{{name}}</div>
+                            <div id="image10 is-centered"><img id="imgsrc10" src="{{image}}" alt="" /></div>
+                            <div id="address10">
+                              Address:
+                              <span class="italics">{{location}}</span>
+                            </div>
+                            <div class="columns">
+                              <div class="column is-half" id="number10">
+                                Phone Number: <span class="italics">{{phone}}</span>
+                              </div>
+                              <div class="column is-half" id="reviews10">
+                                Reviews: {{rating}}
+                              </div>
+                            </div>
+                            <div class="columns is-centered bottomIcons has-background-black">
+                              <div class="column has-text-centered">
+                                <span class="icon has-text-success">
+                                  <button class="yes" restaurant="" id="yes10"><i
+                                      class="fas fa-heart fa-4x"></i></button>
+                                </span>
+                              </div>
+                              <div class="column has-text-centered">
+                                <span class="icon has-text-danger">
+                                  <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                        <<div class="container is-hidden" id="card11">
+                          <div class="columns is-centered has-text-centered">
+                            <div class="column results is-one-third has-background-white">
+                              <div id="name11">{{name}}</div>
+                              <div id="image11 is-centered"><img id="imgsrc11" src="{{image}}" alt="" /></div>
+                              <div id="address">
+                                Address:
+                                <span class="italics">{{location}}</span>
+                              </div>
+                              <div class="columns">
+                                <div class="column is-half" id="number11">
+                                  Phone Number: <span class="italics">{{phone}}</span>
+                                </div>
+                                <div class="column is-half" id="reviews11">
+                                  Reviews: {{rating}}
+                                </div>
+                              </div>
+                              <div class="columns is-centered bottomIcons has-background-black">
+                                <div class="column has-text-centered">
+                                  <span class="icon has-text-success">
+                                    <button class="yes" restaurant="" id="yes11"><i
+                                        class="fas fa-heart fa-4x"></i></button>
+                                  </span>
+                                </div>
+                                <div class="column has-text-centered">
+                                  <span class="icon has-text-danger">
+                                    <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                          <<div class="container is-hidden" id="card12">
+                            <div class="columns is-centered has-text-centered">
+                              <div class="column results is-one-third has-background-white">
+                                <div id="name12">{{name}}</div>
+                                <div id="image12 is-centered"><img id="imgsrc12" src="{{image}}" alt="" /></div>
+                                <div id="address12">
+                                  Address:
+                                  <span class="italics">{{location}}</span>
+                                </div>
+                                <div class="columns">
+                                  <div class="column is-half" id="number12">
+                                    Phone Number: <span class="italics">{{phone}}</span>
+                                  </div>
+                                  <div class="column is-half" id="reviews12">
+                                    Reviews: {{rating}}
+                                  </div>
+                                </div>
+                                <div class="columns is-centered bottomIcons has-background-black">
+                                  <div class="column has-text-centered">
+                                    <span class="icon has-text-success">
+                                      <button class="yes" restaurant="" id="yes12"><i
+                                          class="fas fa-heart fa-4x"></i></button>
+                                    </span>
+                                  </div>
+                                  <div class="column has-text-centered">
+                                    <span class="icon has-text-danger">
+                                      <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                            </div>
+                            <<div class="container is-hidden" id="card13">
+                              <div class="columns is-centered has-text-centered">
+                                <div class="column results is-one-third has-background-white">
+                                  <div id="name13">{{name}}</div>
+                                  <div id="image13 is-centered"><img id="imgsrc13" src="{{image}}" alt="" /></div>
+                                  <div id="address13">
+                                    Address:
+                                    <span class="italics">{{location}}</span>
+                                  </div>
+                                  <div class="columns">
+                                    <div class="column is-half" id="number13">
+                                      Phone Number: <span class="italics">{{phone}}</span>
+                                    </div>
+                                    <div class="column is-half" id="reviews13">
+                                      Reviews: {{rating}}
+                                    </div>
+                                  </div>
+                                  <div class="columns is-centered bottomIcons has-background-black">
+                                    <div class="column has-text-centered">
+                                      <span class="icon has-text-success">
+                                        <button class="yes" restaurant="" id="yes13"><i
+                                            class="fas fa-heart fa-4x"></i></button>
+                                      </span>
+                                    </div>
+                                    <div class="column has-text-centered">
+                                      <span class="icon has-text-danger">
+                                        <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                              </div>
+                              <<div class="container is-hidden" id="card14">
+                                <div class="columns is-centered has-text-centered">
+                                  <div class="column results is-one-third has-background-white">
+                                    <div id="name14">{{name}}</div>
+                                    <div id="image14 is-centered"><img id="imgsrc14" src="{{image}}" alt="" /></div>
+                                    <div id="address14">
+                                      Address:
+                                      <span class="italics">{{location}}</span>
+                                    </div>
+                                    <div class="columns">
+                                      <div class="column is-half" id="number14">
+                                        Phone Number: <span class="italics">{{phone}}</span>
+                                      </div>
+                                      <div class="column is-half" id="reviews14">
+                                        Reviews: {{rating}}
+                                      </div>
+                                    </div>
+                                    <div class="columns is-centered bottomIcons has-background-black">
+                                      <div class="column has-text-centered">
+                                        <span class="icon has-text-success">
+                                          <button class="yes" restaurant="" id="yes14"><i
+                                              class="fas fa-heart fa-4x"></i></button>
+                                        </span>
+                                      </div>
+                                      <div class="column has-text-centered">
+                                        <span class="icon has-text-danger">
+                                          <button id="nono"> <i class="fas fa-times-circle fa-4x"
+                                              id="nono"></i></button>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                                </div>
+                                <<div class="container is-hidden" id="card15">
+                                  <div class="columns is-centered has-text-centered">
+                                    <div class="column results is-one-third has-background-white">
+                                      <div id="name15">{{name}}</div>
+                                      <div id="image15 is-centered"><img id="imgsrc15" src="{{image}}" alt="" /></div>
+                                      <div id="address15">
+                                        Address:
+                                        <span class="italics">{{location}}</span>
+                                      </div>
+                                      <div class="columns">
+                                        <div class="column is-half" id="number15">
+                                          Phone Number: <span class="italics">{{phone}}</span>
+                                        </div>
+                                        <div class="column is-half" id="reviews15">
+                                          Reviews: {{rating}}
+                                        </div>
+                                      </div>
+                                      <div class="columns is-centered bottomIcons has-background-black">
+                                        <div class="column has-text-centered">
+                                          <span class="icon has-text-success">
+                                            <button class="yes" restaurant="" id="yes15"><i
+                                                class="fas fa-heart fa-4x"></i></button>
+                                          </span>
+                                        </div>
+                                        <div class="column has-text-centered">
+                                          <span class="icon has-text-danger">
+                                            <button id="nono"> <i class="fas fa-times-circle fa-4x"
+                                                id="nono"></i></button>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  <<div class="container is-hidden" id="card16">
+                                    <div class="columns is-centered has-text-centered">
+                                      <div class="column results is-one-third has-background-white">
+                                        <div id="name16">{{name}}</div>
+                                        <div id="image16 is-centered"><img id="imgsrc16" src="{{image}}" alt="" /></div>
+                                        <div id="address16">
+                                          Address:
+                                          <span class="italics">{{location}}</span>
+                                        </div>
+                                        <div class="columns">
+                                          <div class="column is-half" id="number16">
+                                            Phone Number: <span class="italics">{{phone}}</span>
+                                          </div>
+                                          <div class="column is-half" id="reviews16">
+                                            Reviews: {{rating}}
+                                          </div>
+                                        </div>
+                                        <div class="columns is-centered bottomIcons has-background-black">
+                                          <div class="column has-text-centered">
+                                            <span class="icon has-text-success">
+                                              <button class="yes" restaurant="" id="yes16"><i
+                                                  class="fas fa-heart fa-4x"></i></button>
+                                            </span>
+                                          </div>
+                                          <div class="column has-text-centered">
+                                            <span class="icon has-text-danger">
+                                              <button id="nono"> <i class="fas fa-times-circle fa-4x"
+                                                  id="nono"></i></button>
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <<div class="container is-hidden" id="card17">
+                                      <div class="columns is-centered has-text-centered">
+                                        <div class="column results is-one-third has-background-white">
+                                          <div id="name17">{{name}}</div>
+                                          <div id="image17 is-centered"><img id="imgsrc17" src="{{image}}" alt="" />
+                                          </div>
+                                          <div id="address17">
+                                            Address:
+                                            <span class="italics">{{location}}</span>
+                                          </div>
+                                          <div class="columns">
+                                            <div class="column is-half" id="number17">
+                                              Phone Number: <span class="italics">{{phone}}</span>
+                                            </div>
+                                            <div class="column is-half" id="reviews17">
+                                              Reviews: {{rating}}
+                                            </div>
+                                          </div>
+                                          <div class="columns is-centered bottomIcons has-background-black">
+                                            <div class="column has-text-centered">
+                                              <span class="icon has-text-success">
+                                                <button class="yes" restaurant="" id="yes17"><i
+                                                    class="fas fa-heart fa-4x"></i></button>
+                                              </span>
+                                            </div>
+                                            <div class="column has-text-centered">
+                                              <span class="icon has-text-danger">
+                                                <button id="nono"> <i class="fas fa-times-circle fa-4x"
+                                                    id="nono"></i></button>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      </div>
+                                      </div>
+                                      <<div class="container is-hidden" id="card18">
+                                        <div class="columns is-centered has-text-centered">
+                                          <div class="column results is-one-third has-background-white">
+                                            <div id="name18">{{name}}</div>
+                                            <div id="image18 is-centered"><img id="imgsrc18" src="{{image}}" alt="" />
+                                            </div>
+                                            <div id="address18">
+                                              Address:
+                                              <span class="italics">{{location}}</span>
+                                            </div>
+                                            <div class="columns">
+                                              <div class="column is-half" id="number18">
+                                                Phone Number: <span class="italics">{{phone}}</span>
+                                              </div>
+                                              <div class="column is-half" id="reviews18">
+                                                Reviews: {{rating}}
+                                              </div>
+                                            </div>
+                                            <div class="columns is-centered bottomIcons has-background-black">
+                                              <div class="column has-text-centered">
+                                                <span class="icon has-text-success">
+                                                  <button class="yes" restaurant="" id="yes18"><i
+                                                      class="fas fa-heart fa-4x"></i></button>
+                                                </span>
+                                              </div>
+                                              <div class="column has-text-centered">
+                                                <span class="icon has-text-danger">
+                                                  <button id="nono"> <i class="fas fa-times-circle fa-4x"
+                                                      id="nono"></i></button>
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <<div class="container is-hidden" id="card19">
+                                          <div class="columns is-centered has-text-centered">
+                                            <div class="column results is-one-third has-background-white">
+                                              <div id="name19">{{name}}</div>
+                                              <div id="image19 is-centered"><img id="imgsrc19" src="" alt="" /></div>
+                                              <div id="address19">
+                                                Address:
+                                                <span class="italics">{{location}}</span>
+                                              </div>
+                                              <div class="columns">
+                                                <div class="column is-half" id="number19">
+                                                  Phone Number: <span class="italics">{{phone}}</span>
+                                                </div>
+                                                <div class="column is-half" id="reviews19">
+                                                  Reviews: {{rating}}
+                                                </div>
+                                              </div>
+                                              <div class="columns is-centered bottomIcons has-background-black">
+                                                <div class="column has-text-centered">
+                                                  <span class="icon has-text-success">
+                                                    <button class="yes" restaurant="" id="yes19"><i
+                                                        class="fas fa-heart fa-4x"></i></button>
+                                                  </span>
+                                                </div>
+                                                <div class="column has-text-centered">
+                                                  <span class="icon has-text-danger">
+                                                    <button id="nono"> <i class="fas fa-times-circle fa-4x"
+                                                        id="nono"></i></button>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          </div>
+                                          </div>
 </section>
