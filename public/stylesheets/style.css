@@ -101,3 +101,8 @@ i {
 #signin-txt {
   margin-right: 30px;
 }
+
+.rName {
+  font-family: "oleo script", cursive;
+  font-size: 2rem;
+}

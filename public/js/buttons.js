@@ -22,6 +22,7 @@ $("#search").on("click", function(event) {
     console.log(data);
 
     for (let i = 0; i < 20; i++) {
+      debugger;
       var choices = data.businesses[i];
 
       $(`#name${[i]}`).text(choices.name);
