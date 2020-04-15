@@ -24,7 +24,7 @@ img {
 }
 
 .reviews {
-  height: 20px !important;
+  height: 25px !important;
 }
 
 #mainTitle {
@@ -108,5 +108,9 @@ i {
 
 .rName {
   font-family: "oleo script", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.newFont {
+  font-size: 20px;
 }
