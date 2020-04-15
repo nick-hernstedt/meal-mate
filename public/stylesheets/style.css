@@ -23,6 +23,10 @@ img {
   border-radius: 15px;
 }
 
+.reviews {
+  height: 20px !important;
+}
+
 #mainTitle {
   font-size: 6rem;
   font-family: "oleo script", cursive;
