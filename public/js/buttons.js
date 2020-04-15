@@ -1,12 +1,9 @@
-const no = document.getElementById(`nono`);
-
-const yes = document.getElementById(`yes`);
-
+// create a variable equal to zero
 let j = 0;
-
+//handles the search function on click
 $("#search").on("click", function(event) {
   event.preventDefault();
-
+  // creates a location variable to be passed to the back end
   var location = {
     location: $("#locationSearch")
       .val()
@@ -14,13 +11,13 @@ $("#search").on("click", function(event) {
   };
 
   console.log(location);
-
+//posts information to the back end
   $.ajax("/api/proxy", {
     type: "POST",
     data: location,
   }).then(function(data) {
     console.log(data);
-
+    // creates a loop that goes through information recieved from the back end and renders cards
     for (let i = 0; i < 20; i++) {
       var choices = data.businesses[i];
 
@@ -31,6 +28,7 @@ $("#search").on("click", function(event) {
       $(`#address${[i]}`).text(choices.location.display_address);
       $(`#number${[i]}`).text(choices.display_phone);
       $(`#reviews${[i]}`).text(choices.rating);
+      //checks and sees what star card we should be displaying
       switch (choices.rating) {
         case 0:
           $(`#reviews${[i]}`).attr("src", "/images/small_0@3x.png");
@@ -65,47 +63,53 @@ $("#search").on("click", function(event) {
       }
     }
   });
-
+  // shows the first card
   $(`#card${j}`).toggleClass("is-hidden");
 
-  j += 1;
+  //incrimants j for future use
+  j + 1;
 });
 
+// handles yes button click
 $(`.yes`).on("click", function() {
   event.preventDefault();
-
+// creates a match variable to pass to the back end and compare in the db
   var match = {
     name: $(this).attr("restaurant"),
   };
 
   console.log($(this).attr("restaurant"));
-
+// posts the match variable to the back end
   $.ajax("/api/match", {
     type: "post",
     data: match,
   }).then((data) => {
+    // checks to see if a match has been made
     if (data != $(this).attr("restaurant")) {
       console.log(`yes clicked`);
+      // hides current card and shows next card
       $(`#card${(j -= 1)}`).toggleClass("is-hidden");
       $(`#card${(j += 1)}`).toggleClass("is-hidden");
 
       j += 1;
+      //calls on match
     } else if (data == $(this).attr("restaurant")) {
       $(`.modal`).toggleClass(`is-active`);
     }
   });
 });
-
+// handles no button click
 $(`.nono`).on("click", function() {
   event.preventDefault();
 
   console.log(`no clicked`);
+  //hides current card and shows next card
   $(`#card${(j -= 1)}`).toggleClass("is-hidden");
   $(`#card${(j += 1)}`).toggleClass("is-hidden");
 
   j += 1;
 });
-
+// refreshes page once the modal button has been clicked
 $(`.close`).click(function() {
   location.reload();
 });
