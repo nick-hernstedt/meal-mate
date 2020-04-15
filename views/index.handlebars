@@ -24,11 +24,37 @@
   </div>
 </section>
 
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">You Found A Meal Mate!</p>
+      <button class="delete close" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <ol>
+        <li>1: Please remember to shower before going to your meal, people want to smell their food, not you.</li>
+        <br>
+        <li>2: Please keep your elbows off the table, its a resturant not a barn</li>
+        <br>
+        <li>3: Mate also means friend, don't make things weird</li>
+      </ol>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-primary close">Return To Page</button>
+
+    </footer>
+  </div>
+</div>
+
+
 <section>
   <div class="container is-hidden" id="card0">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name0">{{name}}</div>
+        <a id="url0" href={{url}}>
+          <div id="name0" class="rName">{{name}}</div>
+        </a>
         <div id="image0 is-centered"><img id="imgsrc0" src="#" alt="" /></div>
         <div id="address0">
           Address:
@@ -38,8 +64,9 @@
           <div class="column is-half" id="number0">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews0">
-            Reviews: {{rating}}
+          <div class="column is-half">
+          <img class="reviews" id="reviews0">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -61,7 +88,9 @@
   <div class="container is-hidden" id="card1">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name1">{{name}}</div>
+        <a id="url1" href={{url}}>
+          <div id="name1" class="rName">{{name}}</div>
+        </a>
         <div id="image1 is-centered"><img id="imgsrc1" src="{{image}}" alt="" /></div>
         <div id="address1">
           Address:
@@ -71,8 +100,9 @@
           <div class="column is-half" id="number1">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews1">
-            Reviews: {{rating}}
+          <div class="column is-half">
+          <img class="reviews" id="reviews1">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -83,7 +113,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -94,7 +124,9 @@
   <div class="container is-hidden" id="card2">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name2">{{name}}</div>
+        <a id="url2" href={{url}}>
+          <div id="name2" class="rName">{{name}}</div>
+        </a>
         <div id="image is-centered"><img id="imgsrc2" src="{{image}}" alt="" /></div>
         <div id="address2">
           Address:
@@ -104,8 +136,9 @@
           <div class="column is-half" id="number2">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews2">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews2">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -116,7 +149,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -127,7 +160,9 @@
   <div class="container is-hidden" id="card3">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name3">{{name}}</div>
+        <a id="url3" href={{url}}>
+          <div id="name3" class="rName">{{name}}</div>
+        </a>
         <div id="image3 is-centered"><img id="imgsrc3" src="{{image}}" alt="" /></div>
         <div id="address3">
           Address:
@@ -137,8 +172,9 @@
           <div class="column is-half" id="number3">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews3">
-            Reviews: {{rating}}
+          <div class="column is-half">
+          <img class="reviews" id="reviews3">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -149,7 +185,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -157,10 +193,12 @@
     </div>
   </div>
   </div>
-  <<div class="container is-hidden" id="card4">
+  <div class="container is-hidden" id="card4">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name4">{{name}}</div>
+        <a id="url4" href={{url}}>
+          <div id="name4" class="rName">{{name}}</div>
+        </a>
         <div id="image4 is-centered"><img id="imgsrc4" src="{{image}}" alt="" /></div>
         <div id="address4">
           Address:
@@ -170,8 +208,9 @@
           <div class="column is-half" id="number4">
             Phone Number: <span class="italics4">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews4">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -182,7 +221,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -193,7 +232,9 @@
   <div class="container is-hidden" id="card5">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name5">{{name}}</div>
+        <a id="url5" href={{url}}>
+          <div id="name5" class="rName">{{name}}</div>
+        </a>
         <div id="image5 is-centered"><img id="imgsrc5" src="{{image}}" alt="" /></div>
         <div id="address5">
           Address:
@@ -203,8 +244,9 @@
           <div class="column is-half" id="number5">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews5">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews5">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -215,7 +257,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -226,7 +268,9 @@
   <div class="container is-hidden" id="card6">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name6">{{name}}</div>
+        <a id="url6" href={{url}}>
+          <div id="name6" class="rName">{{name}}</div>
+        </a>
         <div id="image6 is-centered"><img id="imgsrc6" src="{{image}}" alt="" /></div>
         <div id="address6">
           Address:
@@ -236,8 +280,9 @@
           <div class="column is-half" id="number6">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews6">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews6">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -248,7 +293,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -259,7 +304,9 @@
   <div class="container is-hidden" id="card7">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name7">{{name}}</div>
+        <a id="url7" href={{url}}>
+          <div id="name7" class="rName">{{name}}</div>
+        </a>
         <div id="image7 is-centered"><img id="imgsrc7" src="{{image}}" alt="" /></div>
         <div id="address7">
           Address:
@@ -269,8 +316,9 @@
           <div class="column is-half" id="number7">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews7">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews7">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -281,7 +329,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -292,7 +340,9 @@
   <div class="container is-hidden" id="card8">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name8">{{name}}</div>
+        <a id="url8" href={{url}}>
+          <div id="name8" class="rName">{{name}}</div>
+        </a>
         <div id="image8 is-centered"><img id="imgsrc8" src="{{image}}" alt="" /></div>
         <div id="address">
           Address:
@@ -302,8 +352,9 @@
           <div class="column is-half" id="number8">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews8">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews8">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -314,7 +365,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -325,7 +376,9 @@
   <div class="container is-hidden" id="card9">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name9">{{name}}</div>
+        <a id="url9" href={{url}}>
+          <div id="name9" class="rName">{{name}}</div>
+        </a>
         <div id="image9 is-centered"><img id="imgsrc9" src="{{image}}" alt="" /></div>
         <div id="address9">
           Address:
@@ -335,8 +388,9 @@
           <div class="column is-half" id="number9">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews9">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews9">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -347,7 +401,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -359,7 +413,9 @@
   <div class="container is-hidden" id="card10">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name10">{{name}}</div>
+        <a id="url10" href={{url}}>
+          <div id="name10" class="rName">{{name}}</div>
+        </a>
         <div id="image10 is-centered"><img id="imgsrc10" src="{{image}}" alt="" /></div>
         <div id="address10">
           Address:
@@ -369,8 +425,9 @@
           <div class="column is-half" id="number10">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews10">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews10">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -381,7 +438,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -392,7 +449,9 @@
   <div class="container is-hidden" id="card11">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name11">{{name}}</div>
+        <a id="url11" href={{url}}>
+          <div id="name11" class="rName">{{name}}</div>
+        </a>
         <div id="image11 is-centered"><img id="imgsrc11" src="{{image}}" alt="" /></div>
         <div id="address">
           Address:
@@ -402,8 +461,9 @@
           <div class="column is-half" id="number11">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews11">
-            Reviews: {{rating}}
+          <div class="column is-half">
+          <img class="reviews" id="reviews11">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -414,7 +474,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -425,7 +485,9 @@
   <div class="container is-hidden" id="card12">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name12">{{name}}</div>
+        <a id="url12" href={{url}}>
+          <div id="name12" class="rName">{{name}}</div>
+        </a>
         <div id="image12 is-centered"><img id="imgsrc12" src="{{image}}" alt="" /></div>
         <div id="address12">
           Address:
@@ -435,8 +497,9 @@
           <div class="column is-half" id="number12">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews12">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews12">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -447,7 +510,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -458,18 +521,21 @@
   <div class="container is-hidden" id="card13">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name13">{{name}}</div>
+        <a id="url13" href={{url}}>
+          <div id="name13">{{name}}</div>
+        </a>
         <div id="image13 is-centered"><img id="imgsrc13" src="{{image}}" alt="" /></div>
         <div id="address13">
           Address:
           <span class="italics">{{location}}</span>
         </div>
         <div class="columns">
-          <div class="column is-half" id="number13">
+          <div class="column is-half" id="number13" class="rName">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews13">
-            Reviews: {{rating}}
+          <div class="column is-half">
+          <img class="reviews" id="reviews13">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -480,7 +546,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -491,7 +557,9 @@
   <div class="container is-hidden" id="card14">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name14">{{name}}</div>
+        <a id="url14" href={{url}}>
+          <div id="name14" class="rName">{{name}}</div>
+        </a>
         <div id="image14 is-centered"><img id="imgsrc14" src="{{image}}" alt="" /></div>
         <div id="address14">
           Address:
@@ -501,8 +569,9 @@
           <div class="column is-half" id="number14">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews14">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews14">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -513,7 +582,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -524,7 +593,9 @@
   <div class="container is-hidden" id="card15">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name15">{{name}}</div>
+        <a id="url15" href={{url}}>
+          <div id="name15" class="rName">{{name}}</div>
+        </a>
         <div id="image15 is-centered"><img id="imgsrc15" src="{{image}}" alt="" /></div>
         <div id="address15">
           Address:
@@ -534,8 +605,9 @@
           <div class="column is-half" id="number15">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews15">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews15">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -546,7 +618,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -557,7 +629,9 @@
   <div class="container is-hidden" id="card16">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name16">{{name}}</div>
+        <a id="url16" href={{url}}>
+          <div id="name16" class="rName">{{name}}</div>
+        </a>
         <div id="image16 is-centered"><img id="imgsrc16" src="{{image}}" alt="" /></div>
         <div id="address16">
           Address:
@@ -567,8 +641,9 @@
           <div class="column is-half" id="number16">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews16">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews16">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -579,7 +654,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -590,8 +665,11 @@
   <div class="container is-hidden" id="card17">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name17">{{name}}</div>
-        <div id="image17 is-centered"><img id="imgsrc17" src="{{image}}" alt="" /></div>
+        <a id="url17" href={{url}}>
+          <div id="name17" class="rName">{{name}}</div>
+        </a>
+        <div id="image17 is-centered"><img id="imgsrc17" src="{{image}}" alt="" />
+        </div>
         <div id="address17">
           Address:
           <span class="italics">{{location}}</span>
@@ -600,8 +678,9 @@
           <div class="column is-half" id="number17">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews17">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews17">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -612,7 +691,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono"> <i class="fas fa-times-circle fa-4x" id="nono" class="nono"></i></button>
             </span>
           </div>
         </div>
@@ -623,8 +702,11 @@
   <div class="container is-hidden" id="card18">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name18">{{name}}</div>
-        <div id="image18 is-centered"><img id="imgsrc18" src="{{image}}" alt="" /></div>
+        <a id="url18" href={{url}}>
+          <div id="name18" class="rName">{{name}}</div>
+        </a>
+        <div id="image18 is-centered"><img id="imgsrc18" src="{{image}}" alt="" />
+        </div>
         <div id="address18">
           Address:
           <span class="italics">{{location}}</span>
@@ -633,8 +715,9 @@
           <div class="column is-half" id="number18">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews18">
-            Reviews: {{rating}}
+         <div class="column is-half">
+          <img class="reviews" id="reviews18">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -645,7 +728,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>
@@ -656,7 +739,9 @@
   <div class="container is-hidden" id="card19">
     <div class="columns is-centered has-text-centered">
       <div class="column results is-one-third has-background-white">
-        <div id="name19">{{name}}</div>
+        <a id="url19" href={{url}}>
+          <div id="name19" class="rName">{{name}}</div>
+        </a>
         <div id="image19 is-centered"><img id="imgsrc19" src="" alt="" /></div>
         <div id="address19">
           Address:
@@ -666,8 +751,9 @@
           <div class="column is-half" id="number19">
             Phone Number: <span class="italics">{{phone}}</span>
           </div>
-          <div class="column is-half" id="reviews19">
-            Reviews: {{rating}}
+        <div class="column is-half">
+          <img class="reviews" id="reviews19">
+          {{ratings}}
           </div>
         </div>
         <div class="columns is-centered bottomIcons has-background-black">
@@ -678,7 +764,7 @@
           </div>
           <div class="column has-text-centered">
             <span class="icon has-text-danger">
-              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nope"></i></button>
+              <button id="nono" class="nono"> <i class="fas fa-times-circle fa-4x" id="nono"></i></button>
             </span>
           </div>
         </div>

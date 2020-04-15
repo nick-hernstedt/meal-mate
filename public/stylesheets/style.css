@@ -23,6 +23,10 @@ img {
   border-radius: 15px;
 }
 
+.reviews {
+  height: 20px !important;
+}
+
 #mainTitle {
   font-size: 6rem;
   font-family: "oleo script", cursive;
@@ -100,4 +104,9 @@ i {
 
 #signin-txt {
   margin-right: 30px;
+}
+
+.rName {
+  font-family: "oleo script", cursive;
+  font-size: 2rem;
 }
