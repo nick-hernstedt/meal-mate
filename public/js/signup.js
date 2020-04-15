@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
     };
 
     if (!userData.email || !userData.password) {
@@ -26,10 +26,10 @@ $(document).ready(function() {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
-      password: password
+      password: password,
     })
       .then(function(data) {
-        window.location.replace("/members");
+        window.location.replace("/main");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
