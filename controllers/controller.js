@@ -5,10 +5,11 @@ var db = require("../models");
 const axios = require("axios");
 require("dotenv").config();
 
+// getting the model of the restaruant
 const resturant = require("../models/resturant");
-
+// getting our hidden API key
 const key = process.env.API_KEY;
-
+//launching our yelp API call
 router.post("/api/proxy", function(req, res) {
   console.log(`yes`);
   axios
@@ -22,29 +23,33 @@ router.post("/api/proxy", function(req, res) {
       }
     )
     .then(answer => {
+      //returning the information from the API call to the front end
       console.log(answer.data);
       return res.json(answer.data);
     });
 });
 
 router.get("/main", function(req, res) {
+  // renders the main index page
   res.render("index", req.user);
 });
 
-
+// checks to see if a match can be made inside the db
 router.post("/api/match", function (req, res) {
   console.log(req.body.name)
-
+// creates an object in the db table
   db.Resturant.create({
     name: req.body.name,
   }).then(data => {
     res.send(data)
   }).catch( err =>{
+    //if the entry is unique and already exists we handle this error
     db.Resturant.destroy({
       where: {
         name: req.body.name
       }
     })
+    //sends the information to the front end
     res.send(req.body.name)
   })
 });
