@@ -67,7 +67,7 @@ $("#search").on("click", function(event) {
   $(`#card${j}`).toggleClass("is-hidden");
 
   //incrimants j for future use
-  j + 1;
+  j += 1;
 });
 
 // handles yes button click
