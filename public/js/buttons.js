@@ -11,7 +11,7 @@ $("#search").on("click", function(event) {
   };
 
   console.log(location);
-//posts information to the back end
+  //posts information to the back end
   $.ajax("/api/proxy", {
     type: "POST",
     data: location,
@@ -67,19 +67,19 @@ $("#search").on("click", function(event) {
   $(`#card${j}`).toggleClass("is-hidden");
 
   //incrimants j for future use
-  j + 1;
+  j += 1;
 });
 
 // handles yes button click
 $(`.yes`).on("click", function() {
   event.preventDefault();
-// creates a match variable to pass to the back end and compare in the db
+  // creates a match variable to pass to the back end and compare in the db
   var match = {
     name: $(this).attr("restaurant"),
   };
 
   console.log($(this).attr("restaurant"));
-// posts the match variable to the back end
+  // posts the match variable to the back end
   $.ajax("/api/match", {
     type: "post",
     data: match,
